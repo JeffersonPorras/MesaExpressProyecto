@@ -1,0 +1,24 @@
+{
+  "name": "mesaexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+  "build-registro": "npx tailwindcss -i ./tailwind.css -o ./landing/CSS/styleRegistro.css --watch",
+  "build-login": "npx tailwindcss -i ./tailwind.css -o ./landing/CSS/login.css --watch",
+  "build-all": "start npm run build-registro & start npm run build-login"
+
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.14",
+    "@tailwindcss/vite": "^4.0.14"
+  }
+}
