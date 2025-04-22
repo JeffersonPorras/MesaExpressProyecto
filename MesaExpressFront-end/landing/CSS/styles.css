@@ -3,15 +3,16 @@
         --primary-color:  #3E7D32;
         --secundary-color:#A2D149;
         --text-color:#000000;
-        --input-color: #f7f3f3;
+        --input-color: #eeebeb;
         --button-color:#FF6600;
+        --color-plan:#e9e5e4 ;
         --white:#ffffff;
         --black:#000000;
         --red:#C7253E;
-        --mm: 1.4rem;
-        --sm: 2rem;
-        --md: 3rem;
-        --lg: 5rem;
+        --minima: 1.4rem;
+        --normal: 2rem;
+        --mediana: 3rem;
+        --grande: 5rem;
         --padding-container: 100px 0;
     }
     *{
@@ -52,6 +53,8 @@ body{
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    background-color: var(--white);
 }
 
 .hero_img{
@@ -63,6 +66,7 @@ body{
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
     z-index: -1;
+    opacity: 90%;
 }
 /*Nav*/
 .nav{
@@ -76,21 +80,21 @@ body{
     align-items: center;
 }
 .nav_logo--mesa{
-    width: 50px;
+    width: 120px;
 }
 nav a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
-    font-size:  var(--md);
+    font-size:  var(--mediana);
 }
 .nav_title{
-    font-size: var(--md);
-    font-weight: 300;
+    font-size: var(--mediana);
+    font-weight: 700;
 }
 
 .nav_link{
-    font-size:var(--sm);
+    font-size:var(--normal);
     margin-left: auto;
     padding: 0;
     display: grid;
@@ -116,7 +120,13 @@ nav a {
 .nav_links--menu{
     color: var(--black);
     text-decoration: none;
+    font-weight: 500;
 }
+.nav_links--menu:hover{
+text-decoration: overline;
+color: var(--red);
+}
+
 .nav_img{
     display: block;
     width: 30px;
@@ -137,25 +147,25 @@ nav a {
 }
 
 .hero_title{
-    font-size: var(--lg);
+    font-size: var(--grande);
 }
 
 .hero_paragraph{
-    font-size: var(--sm);
+    font-size: var(--normal);
     margin-bottom: 20px;
 }
 
-.cta{
+.boton{
     display: inline-block;
     background-color:var(--button-color);
     justify-self: center;
     color: var(--white);
     text-decoration: none;
     padding: 13px 30px;
-    border-radius: 32px;
-    font-size: var(--sm);
+    border-radius: 15px;
+    font-size: var(--normal);
 }
-.cta:hover{
+.boton:hover{
     background: var(--red);
 }
 
@@ -165,15 +175,14 @@ nav a {
 }
 
 .subtitle{
-    font-size: var(--lg);
+    font-size: var(--grande);
     color: var(--text-color);
-    font-size: var(--md);
     margin-bottom: 25px;
 }
 
 .about_paragraph{
-    font-size: var(--mm);
-    line-height: 1.7;
+    font-size: var(--mediana);
+    line-height: 1.5;
 }
 
 .about_main{
@@ -191,16 +200,17 @@ nav a {
     gap: 1em;
     justify-items: center;
     width: 260px;
+    background-color: var(--color-plan);
     overflow: hidden;
     margin: 0 auto;
 }
 
 .about_icon{
-    width: 40px;
+    width: 100px;
 }
 
 .about-title{
-    font-size: var(--md);
+    font-size: var(--mediana);
 }
 /* knowlegde */
 
@@ -224,7 +234,7 @@ nav a {
 }
 
 .knowledge_paragraph{
-    font-size: var(--mm);
+    font-size: var(--minima);
     line-height: 1.7;
     margin-bottom: 15px;
 }
@@ -250,27 +260,27 @@ nav a {
 .price_element{
     background-color: var(--secundary-color);
     text-align: center;
-    font-size: var(--sm);
+    font-size: var(--normal);
     border-radius: 10px;
     box-shadow: 5px 5px 10px; 
     width: 330px;
     padding: 40px;
     --color-plan: #696871;
     --color-price: #1d293f;
-    --bg-cta: var(--primary-color);
-    --color-cta: #5454d4;
+    --bg-boton: var(--primary-color);
+    --color-boton: #5454d4;
     --color-items: #696871;
 }
 
 .price_name{
-    font-size: var(--md);
+    font-size: var(--mediana);
     color: var(--color-plan);
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .price_price{
-    font-size: var(--md);
+    font-size: var(--mediana);
     color:var(--color-price);
 }
 
@@ -279,16 +289,16 @@ nav a {
     display: grid;
     gap: 1em;
     font-weight: 300;
-    font-size: var(--sm);
+    font-size: var(--normal);
     margin-bottom: 50px;
 }
 
-.price_cta{
+.price_boton{
     display: block;
     padding: 20px 0;
     border-radius: 10px;
     text-decoration: none;
-    background-color: var(--bg-cta);
+    background-color: var(--bg-boton);
     font-weight: 600;
     color: var(--white) ;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
@@ -300,8 +310,8 @@ nav a {
     background-color: #FF6600 ;
     --color-plan: rgb(255 255 255 / 75%);
     --color-price: #fff;
-    --bg-cta: #9f3919;
-    --color-cta: #fff;
+    --bg-boton: #9f3919;
+    --color-boton: #fff;
     --color-items: #fff;
 }
 
@@ -374,7 +384,7 @@ nav a {
 }
 
 .questions_paragraph{
-    font-size: var(--sm);
+    font-size: var(--normal);
 }
 .questions_offer{
     display: flex;
@@ -427,7 +437,7 @@ nav a {
 
 .questions_show{
     text-align: left;
-    font-size: var(--sm);
+    font-size: var(--normal);
     height: 0;
     transition: height .3s;
 }
@@ -438,7 +448,7 @@ nav a {
 
 .questions_copy{
     width: 80%;
-    font-size: var(--sm);
+    font-size: var(--normal);
     margin: 0 auto;
     margin-bottom: 30px;
 }
@@ -452,12 +462,12 @@ nav a {
 
 .footer_title{
     font-weight: 300;
-    font-size: var(--md);
+    font-size: var(--mediana);
     margin-bottom: 30px;
 }
 
 .footer_title, .footer_newsletter{
-    font-size: var(--md);
+    font-size: var(--mediana);
     color: var(--white);
 }
 
@@ -501,7 +511,7 @@ nav a {
     display: block;
     padding-left: 10px;
     border-radius: 6px;
-    font-size: var(--sm);
+    font-size: var(--normal);
     outline: none;
     border: none;
     margin-right: 16px;
@@ -514,7 +524,7 @@ nav a {
     padding: 0 20px;
     background-color: #2097f9;
     border: none;
-    font-size: var(--sm);
+    font-size: var(--normal);
     color: var(--white);
     border-radius: 6px;
 }
@@ -526,7 +536,7 @@ nav a {
 }
 
 .footer_copyright{
-    font-size: var(--sm);
+    font-size: var(--normal);
     font-weight: 300;   
 }
 
@@ -636,7 +646,7 @@ nav a {
     }
 
     .footer_title{
-        font-size: var(--sm);
+        font-size: var(--normal);
     }
     .nav_link--footer{
         width: 100%;
@@ -659,16 +669,16 @@ nav a {
         height: 70vh;
     }
     .hero_title{
-        font-size: var(--md);
+        font-size: var(--mediana);
     }
 
     .hero_paragraph{
-        font-size: var(--mm);
+        font-size: var(--minima);
         font-weight: 500;
     }
 
     .subtitle{
-        font-size: var(--md);
+        font-size: var(--mediana);
     }
 
     .nav_links--menu{
@@ -690,7 +700,7 @@ nav a {
     }
 
     .price_price{
-        font-size: var(--sm) ;
+        font-size: var(--normal) ;
     }
 
     .testimony{
@@ -721,15 +731,15 @@ nav a {
         padding-bottom: 30px;
     }
     .questions_paragraph {
-        font-size: var(--mm);
+        font-size: var(--minima);
     }
 
     .questions_show {
-        font-size: var(--mm);
+        font-size: var(--minima);
     }
 
     .questions_copy {
-        font-size: var(--mm);
+        font-size: var(--minima);
     }
 
     .footer_container{
@@ -737,12 +747,12 @@ nav a {
     }
 
     .nav_link--footer{
-        font-size: var(--mm);
+        font-size: var(--minima);
         margin-top: 10px;
     }
     
     .footer_newsletter{
-        font-size: var(--sm);
+        font-size: var(--normal);
     }
 
     .footer_inputs{
@@ -789,7 +799,7 @@ nav a {
     
 }
 .tittle{
-    font-size: var(--lg);
+    font-size: var(--grande);
     margin-bottom: 12px;
     text-align: center;
 
@@ -814,7 +824,7 @@ form a{
     font-size: 2rem;
 }
 label{
-    font-size: var(--sm);
+    font-size: var(--normal);
     font-weight:  bold;
     margin-bottom:  14px;
 }
@@ -823,7 +833,7 @@ label{
     border: none;
     border-radius: 8px;
     height: 45px;
-    font-size: var(--md);
+    font-size: var(--mediana);
     padding: 6px;
     margin-bottom: 12px;
 }
@@ -840,7 +850,7 @@ label{
     color: var(--white);
     width: 100%;
     cursor: pointer;
-    font-size: var(--md);
+    font-size: var(--mediana);
     font-weight: bold;
     font-size: 2rem;
     height: 50px;
@@ -857,7 +867,7 @@ label{
     color: var(--white);
     width: 100%;
     cursor: pointer;
-    font-size: var(--md);
+    font-size: var(--mediana);
     font-weight: bold;
     font-size: 2rem;
     height: 50px;
@@ -887,7 +897,7 @@ label{
     
 }
 .resend{
-    font-size: var(--sm);
+    font-size: var(--normal);
     text-align: center;
 }
 .resend spam{
@@ -896,7 +906,7 @@ label{
 }
 .resend a{
     color: var(--red);
-    font-size: var(--sm);
+    font-size: var(--normal);
     text-decoration: none;
 }
 
