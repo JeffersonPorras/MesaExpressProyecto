@@ -180,8 +180,8 @@ color: var(--red);
     margin-bottom: 25px;
 }
 
-.about_paragraph{
-    font-size: var(--mediana);
+.paragraph{
+    font-size: var(--normal);
     line-height: 1.5;
 }
 
