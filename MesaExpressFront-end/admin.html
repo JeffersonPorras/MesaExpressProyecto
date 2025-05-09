@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./landing/CSS/normalize.css">
     <link rel="stylesheet" href="./landing/CSS/admin.css">
 </head>
+
 <body>
     <header>
         <img src="landing/IMAGES/Logos MesaExpress/LogoMesaExpress.png" alt="logo Mesaexpress" class="nav_logo--mesa">
@@ -17,6 +19,7 @@
         <nav class="nav-menu">
             <a href="#">Inicio</a>
             <a href="#">Usuarios</a>
+            <a href="#productos">Productos</a>
             <a href="#">restaurantes</a>
             <a href="#">Configuración</a>
         </nav>
@@ -38,14 +41,40 @@
                 </tbody>
             </table>
         </div>
-        <button onclick="logout()" class="cta">Cerrar Sesión</button>
+
+        <!-- Sección de gestión de productos mejorada -->
+        <div class="products" id="productos" style="margin-top: 60px;">
+            <h2 style="text-align: center; color: #2E7D32;">Gestión de Productos</h2>
+            <div style="text-align: center; margin: 15px 0;">
+                <button id="btnAgregarProducto"
+                    style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                    Agregar Producto
+                </button>
+            </div>
+            <table id="productosTable" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #8BC34A; color: white;">
+                        <th style="padding: 10px;">Imagen</th>
+                        <th style="padding: 10px;">Nombre</th>
+                        <th style="padding: 10px;">Precio</th>
+                        <th style="padding: 10px;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productosTableBody">
+                    <!-- Aquí se llenarán los productos con JavaScript -->
+                </tbody>
+            </table>
+
+            <!-- Botón de cerrar sesión centrado -->
+            <button onclick="logout()" class="cta">Cerrar Sesión</button>
+
+        </div>
     </main>
 
     <footer class="footer">
         <section class="footer_container container">
             <nav class="nav nav--footer">
                 <h2 class="footer_title">Explora Nuestros Establecimientos</h2>
-
                 <ul class="nav_link nav_link--footer">
                     <li class="nav_items">
                         <a href="#" class="footer_links">Inicio</a>
@@ -58,28 +87,30 @@
                     </li>
                 </ul>
             </nav>
-
             <form class="footer_form">
-                <h2 class="footer_newsletter">registrate</h2>
+                <h2 class="footer_newsletter">regístrate</h2>
                 <div class="footer_inputs">
                     <input type="email" placeholder="Email" class="footer_input">
-                    <input type="submit" value="Registrate" class="footer_submit">
+                    <input type="submit" value="Regístrate" class="footer_submit">
                 </div>
             </form>
         </section>
 
         <section class="footer_copy container">
             <div class="footer_social">
-                <a href="#" class="footer_icons"><img src="/landing/IMAGES/facebook.svg" alt="Logo facebbok" class="footer_img"></a>
-                <a href="#" class="footer_icons"><img src="/landing/IMAGES/youtube.svg" alt="Logo Youtube" class="footer_img"></a>
-                <a href="#" class="footer_icons"><img src="/landing/IMAGES/twitter.svg" alt="logo Twitter" class="footer_img"></a>
+                <a href="#" class="footer_icons"><img src="/landing/IMAGES/facebook.svg" alt="Logo Facebook"
+                        class="footer_img"></a>
+                <a href="#" class="footer_icons"><img src="/landing/IMAGES/youtube.svg" alt="Logo Youtube"
+                        class="footer_img"></a>
+                <a href="#" class="footer_icons"><img src="/landing/IMAGES/twitter.svg" alt="Logo Twitter"
+                        class="footer_img"></a>
             </div>
 
             <p class="footer_copyright">&copy; 2025 MesaExpress - Todos los derechos reservados</p>
         </section>
-   </footer>
+    </footer>
+
     <script src="./js/admin.js"></script>
-   
-    
 </body>
+
 </html>
