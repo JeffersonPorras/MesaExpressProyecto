@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="./landing/CSS/styles.css">
 </head>
 <body>
-   <header class="hero">
-        <nav class="nav container">
-           <div class="nav_logo">
+   <header class="header">
+        <nav class="header_menu">
+           <div class="header_menu-logo">
             <img src="/MesaExpressFront-end/landing/IMAGES/Logos MesaExpress/LogoMesaExpress.png" alt="logo Mesaexpress" class="nav_logo--mesa">
-            <h2 class="nav_title">MesaExpress</h2>
+            <h2 class="header_title">MesaExpress</h2>
            </div> 
 
            <ul class="nav_link nav_link--menu">
@@ -41,7 +41,7 @@
             <h1 class="hero_title">MesaExpress</h1>
             <p class="hero_paragraph">Con MesaExpress, disfruta tus platos favoritos sin esperas. <br><br>
                 Agenda, reserva o pide tu comida para recibirla justo cuando la necesites, directamente en la puerta de tu casa. Rápido, fácil y a tu ritmo. Tú eliges el momento, nosotros nos encargamos del resto.</p>
-            <a href="#" class="boton">Bienvenido</a>
+            <a href="#" class="button">Bienvenido</a>
 
         </section>
    </header>
@@ -52,22 +52,7 @@
             <h2 class="subtitle">Descubre los mejores sabores en un solo lugar.</h2>
             <p class="paragraph">En MesaExpress reunimos una selección de los restaurantes y locales más destacados de tu ciudad. <br> Desde cocina tradicional hasta propuestas gourmet, cada establecimiento ha sido elegido por su calidad, sabor y compromiso con un excelente servicio. Explora, elige y disfruta lo mejor de cada cocina, sin moverte de casa.</p>
 
-            <div class="about_main">
-                <article class="about_icons">
-                    <img src="landing/IMAGES/KFC/KFC_Logo.svg.png" alt="logo KFC" class="about_icon">
-                    <h3 class="about-title">KFC</h3>
-                    <p class="paragraph">Los Ke Miércoles KFC son una de las mejores promociones del restaurante, ya que te da el 50% de piezas de pollo gratis. </p>
-                </article>
-                <article class="about_icons">
-                    <img src="landing/IMAGES/BurgerKing/burger.svg" alt="Logo Burger King" class="about_icon">
-                    <h3 class="about-title">Burger King</h3>
-                    <p class="paragraph">Cuatro mega carnes a la parrilla, bacon ahumado, queso cheddar y salsa cremosa Stacker, en pan de semillas de sésamo tostado.</p>
-                </article>
-                <article class="about_icons">
-                    <img src="/MesaExpressFront-end/landing/IMAGES/McDonalds/McDonald's-Logo.wine copy.png" alt="" class="about_icon">
-                    <h3 class="about-title">McDonald's</h3>
-                    <p class="paragraph">Descubre y disfruta de nuestras hamburguesas, patatas, mcflurry, en nuestra web. Calidad ✓. Pedir o recoger ✓ 24h ✓. Descuentos ✓</p>
-                </article>
+            <div class="about_main" id="card_gastronomicEstablishments">
             </div>
         </section>
 
@@ -77,7 +62,7 @@
                     <h2 class="subtitle">¡Descubre tu próximo antojo!</h2>
                     <p class="paragraph">
                         Explora la variedad de sabores que MesaExpress tiene para ti y convierte cada comida en una experiencia deliciosa.</p>
-                    <a href="./registro.html" class="boton">Registrate</a>
+                    <a href="./registro.html" class="button">Registrate</a>
                 </div>
                 <figure class="knowledge_picture">
                     <img src="/MesaExpressFront-end/landing/IMAGES/36651879-gran-collage-de-imágenes-de-alimentos-variedad-de-comidas-carne-pescado-frutas-verduras.jpg" alt="imagen de platos de comida" class="knowledge_img">
@@ -89,46 +74,9 @@
         <section class="price container">
             <h2 class="subtitle">Promociones</h2>
 
-            <div class="price_table">
-                <div class="price_element">
-                    <p class="price_name">KFC</p>
-                    <h3 class="price_price">Promocion del Dia</h3>
+            <div class="about_main" id="card_promotions"></div>
 
-                    <div class="price_items">
-                        <p class="price_features">30% de Descuento para usuarios nuevos</p>
-                        <p class="price_features">2 Pays gratis.</p>
-                        <p class="price_features">4 bísquets de cortesía</p>
-                    </div>
-
-                    <a href="#" class="price_boton">Agenda</a>
-                </div>
-
-                <div class="price_element price_element--best">
-                    <p class="price_name">BurgerKing</p>
-                    <h3 class="price_price">Promocion del Dia</h3>
-
-                    <div class="price_items">
-                        <p class="price_features">¡En Burger King el 2x1 es de lunes a viernes!</p>
-                        <p class="price_features">Elige tus menús con el delicioso 2×7</p>
-                        <p class="price_features">Compra un combo y paga sólo $10 por una segunda</p>
-                    </div>
-
-                    <a href="#" class="price_boton">agenda</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">Mc Macdonald's</p>
-                    <h3 class="price_price">Promocion del Dia</h3>
-
-                    <div class="price_items">
-                        <p class="price_features">Big Mac®: Hamburguesa 100% Carne | McDonald's.</p>
-                        <p class="price_features">¡La Mejor opción para compartir y combinas!</p>
-                        <p class="price_features">Hamburguesa con tomate y lechuga, papas a la francesa, bebida y yogurt</p>
-                    </div>
-
-                    <a href="#" class="price_boton">agenda</a>
-                </div>
-            </div>
+           
         </section>
 
         <section class="testimony">
@@ -220,8 +168,8 @@
         </section>
         
         <section class="questions_offer">
-            <h2 class="subtitle">estas listo</h2>
-        <a href="/MesaExpressFront-end/registro.html" class="boton">vamos ahora</a>
+            <h2 class="subtitle">Estas listo!!</h2>
+        <a href="/MesaExpressFront-end/registro.html" class="button">vamos ahora</a>
         </section>
    </main>
    <footer class="footer">
@@ -265,5 +213,6 @@
    <script src="/MesaExpressFront-end/js/slider.js"></script>
    <script src="/MesaExpressFront-end/js/questions.js"></script>
    <script src="/MesaExpressFront-end/js/menu.js"></script>
+   <script src="/MesaExpressFront-end/js/index.js"></script>
 </body>
 </html>
