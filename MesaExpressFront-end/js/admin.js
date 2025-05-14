@@ -29,32 +29,63 @@ async function fetchRoles() {
     }
 }
 
+// Función para renderizar los usuarios en la tabla
 async function renderUsers(usuarios) {
-    const roles = await fetchRoles();
+    const roles = await fetchRoles(); // Obtener roles dinámicamente
+
     userTableBody.innerHTML = "";
     usuarios.forEach(user => {
         const row = document.createElement("tr");
 
+        // Construir opciones del select con los roles obtenidos
+        let roleOptions = roles.map(role => 
+            `<option value="${role.id}" ${user.rol_id === role.id ? "selected" : ""}>${role.nombre}</option>`    
+        ).join("");
+
         row.innerHTML = `
             <td>${user.nombres}</td>
             <td>${user.apellidos}</td>
-            <td>${user.email}</td>
+            <td>${user.email}</td> 
             <td>
-               <select>
-    ${roles.map(rol => `
-        <option value="${rol.id}" ${rol.nombre === user.rol ? "selected" : ""}>
-            ${rol.nombre}
-        </option>
-    `).join('')}
-</select>
-
+                <select onchange="updateUser(${user.id}, this.value)">
+                    ${roleOptions}
+                </select>
             </td>
-            <td><button onclick="eliminarUsuario(${user.id})">Eliminar</button></td>
+        
+            <td>
+                <button class="btn-delete" onclick="deleteUser(${user.id})">Eliminar</button>
+            </td>
         `;
-
         userTableBody.appendChild(row);
+    
     });
 }
+
+// Función para actualizar el rol del usuario
+async function updateUser(userId, newRoleId) {
+    try {
+        const response = await fetch(`http://127.0.0.1:5000/admin/usuarios/${userId}/rol`, {  // 🔹 Asegurar que apunta a '/admin/'
+            method: "PUT",
+            headers: { 
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*"
+            },
+            body: JSON.stringify({ rol_id: newRoleId })  // Enviar rol_id en JSON
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert(result.mensaje);  // Mensaje de éxito
+            fetchUsers();  // Recargar la tabla con los nuevos datos
+        } else {
+            alert("Error: " + result.error);
+        }
+    } catch (error) {
+        console.error("Error al actualizar el rol:", error);
+    }
+}
+
 
 async function eliminarUsuario(id) {
     if (!confirm("¿Estás seguro de eliminar este usuario?")) return;
@@ -125,8 +156,8 @@ function renderizarProductos(productos) {
 
         // Celda de acciones
         const celdaAcciones = document.createElement("td");
-        celdaAcciones.innerHTML = `<button onclick="eliminarProducto(${producto.id})">Eliminar</button>
-         <button onclick="mostrarFormularioEdicion(${producto.id})">Modificar</button>
+        celdaAcciones.innerHTML = `<button class="btn-delete" onclick="eliminarProducto(${producto.id})">Eliminar</button>
+         <button class="btn-delete" onclick="mostrarFormularioEdicion(${producto.id})">Modificar</button>
 `;
 
         // Agregar celdas a la fila
@@ -247,6 +278,14 @@ async function eliminarProducto(id) {
     }
 }
 
+
+
+
+async function logout() {
+    await fetch("http://127.0.0.1:5000/login");
+    localStorage.removeItem("usuario"); // Eliminar usuario de localStorage
+    window.location.href = "login.html";
+}
 // ==== INICIALIZAR ====
 fetchUsers();
 fetchProductos();
