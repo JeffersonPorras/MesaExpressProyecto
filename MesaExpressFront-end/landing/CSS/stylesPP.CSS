@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-:root{
+  :root{
         /* colors */
         --primary-color:  #3E7D32;
         --secundary-color:#A2D149;
@@ -48,6 +48,11 @@ header {
     align-items: center;
     padding: 10px 15px;
     background: var(--primary-color);
+    font-size: var(--mediana);
+}
+.subtitle{
+    font-size: var(--mediana);
+    font-weight: 700;
 }
 
 .nav_logo--mesa{
@@ -56,10 +61,10 @@ header {
 nav a { 
     text-decoration: none;
     padding: 10px 15px;
-    font-size:  var(--md);
+    font-size:  var(--mediana);
 }
 .title {
-    font-size: var(--md);
+    font-size: var(--mediana);
     font-weight: bold;
     flex-grow: 1;
 }
@@ -71,10 +76,10 @@ nav a {
 .nav-menu a {
     color: white;
     text-decoration: none;
-    font-size: var(--mm);
+    font-size: var(--mediana);
 }
 .nav_link{
-    font-size:var(--sm);
+    font-size:var(--mediana);
     margin-left: auto;
     padding: 0;
     display: grid;
@@ -88,20 +93,22 @@ nav a {
     border: none;
 }
 .user-name {
-    font-size: var(--mm);
+    font-size: var(--mediana);
     font-weight: bold;
     margin: 15px;
 }
 .cta{
-    width: 120px;
-    height: 60px;
+    width: auto;
+    height: auto;
     display: inline-block;
+    margin: 10px;
+    padding: 10px;
     background-color:var(--button-color);
     justify-self: center;
-    color: var(--white);
+    color: var(--black);
     text-decoration: none;
-    border-radius: 32px;
-    font-size: var(--mm);
+    border-radius: 22px;
+    font-size: var(--mediana);
 }
 .cta:hover{
     background: var(--red);
@@ -176,11 +183,14 @@ nav a {
     gap: 40px;
 }
 .button-menu{
-    width: 80px;
-    height: 25px;
-    border-radius: 5px;
-    box-shadow: 10px 10px 24px 6px rgba(0,0,0,0.37);
+    width: auto;
+    height: auto;
     background-color: var(--button-color);
+    font-size: var(--mediana);
+    border-radius: 15px;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 10px 10px 24px 6px rgba(0,0,0,0.37);
 }
 .menu li {
     display: flex;
@@ -198,15 +208,22 @@ nav a {
 .add-to-cart {
     margin-left: 10px;
     cursor: pointer;
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 5px;
+    background: var(--button-color);
+    font-size: var(--mediana);
+    margin: 15px;
+    padding: 10px;
     border: 0.1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
 }
-
+strong{
+    font-size: var(--mediana);
+    font-weight: 700;
+}
+small{
+    font-size: var(--mediana);
+    font-weight: 300;
+}
 
 /* Footer */
 
@@ -216,12 +233,12 @@ nav a {
 
 .footer_title{
     font-weight: 300;
-    font-size: var(--md);
+    font-size: var(--mediana);
     margin-bottom: 30px;
 }
 
 .footer_title, .footer_newsletter{
-    font-size: var(--md);
+    font-size: var(--mediana);
     color: var(--white);
 }
 
@@ -266,7 +283,7 @@ nav a {
     display: block;
     padding-left: 10px;
     border-radius: 6px;
-    font-size: var(--sm);
+    font-size: var(--minima);
     outline: none;
     border: none;
     margin-right: 16px;
@@ -279,7 +296,7 @@ nav a {
     padding: 0 20px;
     background-color: #2097f9;
     border: none;
-    font-size: var(--sm);
+    font-size: var(--mediana);
     color: var(--white);
     border-radius: 6px;
 }
@@ -291,7 +308,7 @@ nav a {
 }
 
 .footer_copyright{
-    font-size: var(--sm);
+    font-size: var(--mediana);
     font-weight: 300;   
 }
 
@@ -316,7 +333,7 @@ nav a {
     }
 
     .footer_title{
-        font-size: var(--sm);
+        font-size: var(--mediana);
     }
     .nav_link--footer{
         width: 100%;
