@@ -95,7 +95,7 @@ nav a:hover {
     /* espacio para el botÃ³n */
 }
 
-.container-table {
+.container-table, .products{
     max-width: 90%;
     margin: auto;
     background: white;
@@ -133,6 +133,9 @@ td {
     font-size: var(--mm);
 }
 
+td img{
+    margin-left: 40%;
+}
 th {
     background-color: #A2D149;
     color: white;
